@@ -1,0 +1,24 @@
+// Define tags known to your key-board here. The topic used when MQTT updates are posted.
+// Make sure to end the list with an empty member (sentinel).
+
+static struct NfcTag tags[] = {
+// Example:
+//  {
+//    .uid = { 0x00, 0x01, 0x02, 0x03 },
+//    .uidSize = 4,
+//    .topic = "key/foo"
+//  },
+  {} // sentinel
+};
+
+// Define your network details here.
+
+const char* WIFI_SSID = "YourSSID";
+const char* WIFI_PASS = "YourPassword";
+const char* MQTT_SERVER = "10.0.0.1";
+
+// Multiple readers are supported. Specify the SS pin for each of them here.
+
+#define NR_OF_READERS   1
+byte ssPins[NR_OF_READERS] = { D8 };
+MFRC522 mfrc522[NR_OF_READERS];
