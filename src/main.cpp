@@ -44,7 +44,7 @@ bool connect() {
   Serial.print(MQTT_SERVER);
   Serial.print(" ...");
 
-  while (!client.connect("key-board")) {
+  while (!client.connect("NFCeyboard")) {
     delay(500);
     Serial.print(".");
   }
